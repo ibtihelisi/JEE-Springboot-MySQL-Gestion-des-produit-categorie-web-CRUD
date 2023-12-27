@@ -25,19 +25,14 @@ public class Produit {
 	private int quantite;
 	
 	
-	public Categorie getCategorie() {
-		return categorie;
-	}
-	public void setCategorie(Categorie categorie) {
-		this.categorie = categorie;
-	}
+	
 	
 		
 	@ManyToOne
 	private Categorie categorie;
 	
 	
-
+ 
 	
 	@Override
 	public String toString() {

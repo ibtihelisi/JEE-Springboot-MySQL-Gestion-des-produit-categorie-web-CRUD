@@ -2,6 +2,10 @@ package com.isitcom.formation.GestionCatalogue.entities;
 
 import java.util.List;
 
+import org.hibernate.annotations.Cascade;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,13 +29,12 @@ public class Categorie
 
     private String nom;
 
-    @OneToMany (mappedBy = "categorie", cascade = CascadeType.ALL)
+    @OneToMany (mappedBy = "categorie")
     private List<Produit> liste;
-
-   
     
-
-   
+    
+ 
+ 
 
 
 	public Categorie(String nom, List<Produit> liste) {
